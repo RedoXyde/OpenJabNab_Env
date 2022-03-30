@@ -1,0 +1,3 @@
+[submodule "OpenJabNab"]
+	path = OpenJabNab
+	url = ../OpenJabNab.git
