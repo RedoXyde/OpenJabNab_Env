@@ -14,7 +14,7 @@ installFolder=install/
 
 # CMake options
 cmakeFlags="-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-cmakeFlags="$cmakeFlags -DCMAKE_INSTALL_PREFIX=$installFolder"
+#cmakeFlags="$cmakeFlags -DBUILD_TESTS=1"
 #cmakeFlags="$cmakeFlags -DCMAKE_INSTALL_PREFIX=$installFolder"
 # Build options
 buildFlags="-j$jobs"
