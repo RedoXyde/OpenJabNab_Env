@@ -1,0 +1,7 @@
+# OpenJabNab
+  # Every hour, o'clock, update stats
+0     *  *    *    *      php -f /home/ojn/ojn_env/http/http-wrapper/cron/stats.php
+  # Every two days, at 00:05, update bunnies locations
+5     0    */2  *    *      php -f /home/ojn/ojn_envhttp/http-wrapper/cron/geo.php
+  # Every day, at 05:1=30, update weather cache
+30     5    */1  *    *      php -f /home/ojn/ojn_env/http/http-wrapper/cron/weather.php

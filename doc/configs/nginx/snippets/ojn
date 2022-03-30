@@ -1,0 +1,39 @@
+index index.html index.php;
+disable_symlinks off;
+
+location /ojn_local/bootcode {
+	if (!-e $request_filename) {
+		rewrite ^/ojn_local/bootcode/bootcode.* /ojn_local/bootcode/bootcode.default last;
+	}
+  try_files $uri $uri/ =404;
+}
+
+location / {
+	if (!-e $request_filename) {
+		rewrite ^.*/bc\.jsp$							/ojn_local/bootcode/$arg_m?;
+		rewrite ^/ojn_local/bootcode/(..)\:(..)\:(..)\:(..)\:(..)\:(..)$ 	/ojn_local/bootcode/bootcode.$1$2$3$4$5$6 last;
+		#rewrite ^/favicon.ico /favicon.ico last;
+  	rewrite ^ /openjabnab.php last;
+  	break;
+	}
+
+  # First attempt to serve request as file, then
+  # as directory, then fall back to displaying a 404.
+  try_files $uri $uri/ =404;
+}
+
+client_max_body_size 10M;
+
+# deny access to .htaccess files
+location ~ /\.ht {
+  deny all;
+}
+
+# Optional: set long EXPIRES header on static assets
+location ~* ^.+\.(jpg|jpeg|gif|bmp|ico|png|css|js|swf)$ {
+  expires 30d;
+  # Optional: Don't log access to assets
+  access_log off;
+}
+
+
