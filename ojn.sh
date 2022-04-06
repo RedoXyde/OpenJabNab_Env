@@ -4,7 +4,7 @@ ulimit -n 4096
 ulimit -c unlimited
 ulimit -Sc unlimited
 
-cmd="`pwd`/build/bin/openjabnab -c `pwd`/conf"
+cmd="`pwd`/build/bin/openjabnab -c `pwd`/conf/"
 if [ $# -eq 0 ]; then
   while true; do
     $cmd
