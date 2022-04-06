@@ -15,8 +15,8 @@ if [ $# -eq 0 ]; then
       kill -9 $pid
     fi
   done
-elif [ $1 == "--gdb" ]; then
+elif [ "$1" = "--gdb" ]; then
   gdb -ex run --args $cmd
-elif [ $1 == "--valgrind" ]; then
+elif [ "$1" = "--valgrind" ]; then
   valgrind $cmd
 fi
