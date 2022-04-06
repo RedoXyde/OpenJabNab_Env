@@ -31,8 +31,9 @@ A lot of configuration is required:
 
 # FIXME
 
-- Remove binaries from utils/ folder
-- Write build, setup, test and run documentations
-- Cleanup paths
-- Cleanup obsolete/legacy config values
-- Remove hardcoded paths from OpenJabNab
+  - Find nabfiles sources, remove binaries from conf/nabfiles, add "autobuild" from sources
+  - Remove binaries from utils/ folder
+  - Write build, setup, test and run documentations
+  - Cleanup paths
+  - Cleanup obsolete/legacy config values
+  - Remove hardcoded paths from OpenJabNab
