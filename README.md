@@ -25,6 +25,10 @@ A lot of configuration is required:
   - Search for "YOUR_" strings in this folder to find out what needs to be replaced (API tokens, credentials, ... )
   - Search for "/home/ojn/" to find paths you may need to change to your setup (on mine, this folder is: /home/ojn/ojn_env)
 
+# Debian
+
+    sudo apt install --no-install-recommends qttools5-dev libqt5sql5-mysql
+
 # FIXME
 
 - Remove binaries from utils/ folder

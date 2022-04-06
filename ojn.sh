@@ -7,11 +7,13 @@ ulimit -Sc unlimited
 cmd="`pwd`/build/bin/openjabnab -c `pwd`/conf"
 if [ $# -eq 0 ]; then
   while true; do
-    catchsegv $cmd
+    $cmd
     pid=$!
-    echo "OJN crashed with exit code $?.  Respawning.." >&2
+    echo "OJN ($pid) crashed with exit code $?.  Respawning.." >&2
     sleep 1
-    kill -9 $pid
+    if [ -n "$pid" ]; then
+      kill -9 $pid
+    fi
   done
 elif [ $1 == "--gdb" ]; then
   gdb -ex run --args $cmd
