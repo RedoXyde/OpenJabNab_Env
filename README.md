@@ -64,8 +64,9 @@ A lot of configuration is required:
         apiget('/accounts/saveAccounts')
     # Edit http/config.php with newly created users credentials 
 
+Adapt to your own needs, this is not a complete guide, just some tips to get started.
 
-# FIXME
+# FIXME later
 
   - Find nabfiles sources, remove binaries from conf/nabfiles, add "autobuild" from sources
   - Remove binaries from utils/ folder
@@ -73,3 +74,4 @@ A lot of configuration is required:
   - Cleanup paths
   - Cleanup obsolete/legacy config values
   - Remove hardcoded paths from OpenJabNab
+
