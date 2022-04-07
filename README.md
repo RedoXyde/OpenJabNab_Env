@@ -27,7 +27,16 @@ A lot of configuration is required:
 
 # Debian
 
-    sudo apt install --no-install-recommends qttools5-dev libqt5sql5-mysql
+    sudo apt install --no-install-recommends mariadb-server nginx php-fpm php-apcu php-pear php-mail php-mail-mime php-mysql qttools5-dev libqt5sql5-mysql
+
+    sudo systemctl enable mariadb
+    sudo systemctl start mariadb
+
+    sudo systemctl enable php7.4-fpm
+    sudo systemctl start php7.4-fpm
+
+    sudo systemctl enable nginx
+    sudo systemctl start nginx
 
 # FIXME
 

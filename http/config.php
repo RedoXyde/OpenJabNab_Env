@@ -28,6 +28,7 @@ define('ROOT_WWW_EXTAPI', HOSTNAME.'/ojn_api/');
 define('ADMIN_EMAIL', 'webmaster@YOUR_DOMAIN');
 define('QUOTA', 25);
 
+//define('WIKI_URL','https://wiki.YOUR_DOMAIN');
 
 define('CACHE_SITE', OJN_API_ROOT.'cache/');
 define('LOGS_SITE',  OJN_API_ROOT.'cache/logs/');
